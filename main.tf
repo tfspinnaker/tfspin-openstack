@@ -21,5 +21,7 @@ resource "openstack_compute_instance_v2" "instances" {
   flavor_name = "small-1"
   image_name  = "CentOS 7.5.1804"
   key_pair    = "spinnaker-keypair"
-  network     = { name="privatenetwork-tenant0021"}
+  network { 
+      name = "privatenetwork-tenant0021"
+  }
 }
